@@ -1,0 +1,120 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#theme {
+    display: block;
+    margin-left: auto;
+    margin-top: 15px;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+#theme:hover {
+    background-color: black;
+    color: white;
+    border-color: white;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main {
+    width: 500px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 28px;
+}
+
+#task {
+    width: 75%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    outline: none;
+}
+
+#task:focus {
+    border-color: #333;
+}
+
+#btn {
+    padding: 12px 18px;
+    margin-left: 5px;
+    border: none;
+    border-radius: 6px;
+    background-color: #222;
+    color: white;
+    cursor: pointer;
+}
+
+#btn:hover {
+    background-color: #444;
+}
+
+#container {
+    margin-top: 25px;
+}
+
+#container div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 12px;
+    margin-bottom: 10px;
+
+    background-color: #f4f4f4;
+    border-radius: 6px;
+}
+
+#all,
+#active,
+#completed {
+    padding: 8px 14px;
+    margin-top: 15px;
+    margin-right: 5px;
+
+    border: none;
+    border-radius: 5px;
+
+    background-color: #ddd;
+    cursor: pointer;
+}
+
+#all:hover,
+#active:hover,
+#completed:hover {
+    background-color: #ccc;
+}
+
+#task-count {
+    margin-top: 20px;
+    color: #555;
+    font-size: 14px;
+}
+#count{
+    margin: 20px;
+}
