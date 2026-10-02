@@ -3,24 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To-Do-List</title>
+
+    <title>To-Do List</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <main id="main">
+
         <button id="theme">Dark Mode</button>
+
         <h1>MY TO-DO LIST</h1>
-         <input type="text"  id="task" placeholder="Enter Your Task">
-    <button id="btn">Add</button>
-    <div id="container"></div>
-    <button id="all">All</button>
-    <button id="active">Active</button>
-    <button id="completed">Completed</button>
-    <p id="count">0 Task Remaining</p>
-    
+
+        <form id="taskForm">
+            <input
+                type="text"
+                id="task"
+                placeholder="Enter Your Task"
+                autocomplete="off"
+            >
+            <button type="submit" id="btn">Add</button>
+        </form>
+
+        <div id="container"></div>
+
+        <div id="filters">
+            <button id="all">All</button>
+            <button id="active">Active</button>
+            <button id="completed">Completed</button>
+        </div>
+
+        <p id="count">0 Tasks Remaining</p>
+
     </main>
-   
-    
+
     <script src="script.js"></script>
 </body>
 </html>

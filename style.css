@@ -1,59 +1,102 @@
 
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-#theme {
-    display: block;
-    margin-left: auto;
-    margin-top: 15px;
-    padding: 8px 12px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    background-color: white;
-    color: black;
-    border: 1px solid black;
-}
-#theme:hover {
-    background-color: black;
-    color: white;
-    border-color: white;
-}
+
+
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f6f8;
+    background-color: 
+     #08306b;
+    color: #FF1493;
+
     min-height: 100vh;
 
     display: flex;
     justify-content: center;
     align-items: center;
+
+    transition: background-color 0.3s, color 0.3s;
 }
+
+
 
 #main {
     width: 500px;
-    background-color: white;
+    background-color: #08306b;
+
     padding: 30px;
+
     border-radius: 12px;
+
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+
+    transition: background-color 0.3s, box-shadow 0.3s;
 }
+
+
+
+#theme {
+    display: block;
+
+    margin-left: auto;
+    margin-bottom: 15px;
+
+    padding: 8px 12px;
+
+    border: 1px solid black;
+    border-radius: 5px;
+
+    background-color: white;
+    color: black;
+
+    cursor: pointer;
+
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#theme:hover {
+    background-color: black;
+    color: white;
+}
+
+
 
 h1 {
     text-align: center;
+
     margin-bottom: 25px;
+
     font-size: 28px;
 }
 
+
+
+
+#taskForm {
+    display: flex;
+    gap: 8px;
+}
+
+
 #task {
-    width: 75%;
+    flex: 1;
+
     padding: 12px;
+
     border: 1px solid #ccc;
     border-radius: 6px;
+
     font-size: 16px;
+
     outline: none;
+
+    transition: border-color 0.3s, background-color 0.3s, color 0.3s;
 }
 
 #task:focus {
@@ -62,47 +105,110 @@ h1 {
 
 #btn {
     padding: 12px 18px;
-    margin-left: 5px;
+
     border: none;
     border-radius: 6px;
-    background-color: #222;
-    color: white;
+
+    background-color:#FF1493;
+    color:  white;
+
     cursor: pointer;
+
+    transition: background-color 0.3s;
 }
 
 #btn:hover {
-    background-color: #444;
+    background-color:#CBC3B4;
 }
 
-#container {
-    margin-top: 25px;
+
+
+
+
+
+
+
+
+
+.delete-btn {
+    padding: 3px 12px;
+    border: none;
+    border-radius: 5px;
+
+    background-color: #FF1493;
+    color: white;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition: background-color 0.3s, transform 0.2s;
 }
+
+.delete-btn:hover {
+    background-color:#FF1493;
+    transform: scale(1.05);
+}
+
+.delete-btn:active {
+    transform: scale(0.95);
+}
+
+
 
 #container div {
     display: flex;
+
     justify-content: space-between;
     align-items: center;
 
+    gap: 10px;
+
     padding: 12px;
+
     margin-bottom: 10px;
 
     background-color: #f4f4f4;
+
     border-radius: 6px;
+
+    transition: background-color 0.3s;
 }
+
+
+
+.completed-task {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+
+
+#filters {
+    margin-top: 15px;
+}
+
+
 
 #all,
 #active,
 #completed {
     padding: 8px 14px;
-    margin-top: 15px;
+
     margin-right: 5px;
 
     border: none;
     border-radius: 5px;
 
-    background-color: #ddd;
+    background-color: #FF1493;
+
     cursor: pointer;
+    color: white;
+
+    transition: background-color 0.3s, color 0.3s;
 }
+
 
 #all:hover,
 #active:hover,
@@ -110,11 +216,136 @@ h1 {
     background-color: #ccc;
 }
 
-#task-count {
+
+
+#count {
     margin-top: 20px;
-    color: #555;
+
+    color: white;
+
     font-size: 14px;
 }
-#count{
-    margin: 20px;
+
+
+
+
+body.dark {
+    background-color: #121212;
+    color: #FF1493;
+}
+
+
+
+body.dark #main {
+    background-color: #1e1e1e;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+
+
+body.dark #task {
+    background-color: #2b2b2b;
+
+    color: white;
+
+    border-color: #555;
+}
+
+
+body.dark #task::placeholder {
+    color: #aaa;
+}
+
+
+body.dark #task:focus {
+    border-color: #aaa;
+}
+
+
+
+body.dark #container div {
+    background-color: #2b2b2b;
+}
+
+
+
+body.dark #all,
+body.dark #active,
+body.dark #completed {
+    background-color:#FF1493;
+
+    color: white;
+}
+
+
+body.dark #all:hover,
+body.dark #active:hover,
+body.dark #completed:hover {
+    background-color: #555;
+}
+
+
+
+body.dark #theme {
+    background-color: #222;
+
+    color: white;
+
+    border-color: white;
+}
+
+
+body.dark #theme:hover {
+    background-color: white;
+
+    color: black;
+}
+
+
+
+
+body.dark #count {
+    color: white;
+}
+
+
+
+@media (max-width: 550px) {
+
+    body {
+        padding: 15px;
+    }
+
+    #main {
+        width: 100%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    #taskForm {
+        flex-direction: column;
+    }
+
+    #btn {
+        width: 100%;
+    }
+
+    #filters {
+        display: flex;
+        gap: 5px;
+    }
+
+    #all,
+    #active,
+    #completed {
+        flex: 1;
+
+        margin-right: 0;
+
+        padding: 8px 5px;
+    }
 }
